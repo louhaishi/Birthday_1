@@ -18,35 +18,30 @@ const PhotoGallery = () => {
       id: 1,
       image: firstDateImg,
       caption: "Our magical first date ✨",
-      date: "January 2024",
       description: "The day we first met and everything felt perfect!"
     },
     {
       id: 2,
       image: beachDateImg,
       caption: "Tanning by the beach and looking for jellyfish 😂",
-      date: "March 2024",
       description: "Sun-kissed skin and jellyfish hunting adventures by the ocean"
     },
     {
       id: 3,
       image: romanticDinnerImg,
       caption: "The best dinner date 🌟",
-      date: "May 2024",
       description: "The dinner after a long walk"
     },
     {
       id: 4,
       image: mountainHikingImg,
       caption: "Mountain hiking adventure 🏔️",
-      date: "July 2024",
       description: "Falling 3 times"
     },
     {
       id: 5,
       image: movieImg,
       caption: "Cinema day \"Superman\" 🎬",
-      date: "September 2024",
       description: "Cinema day \"Superman\""
     }
   ]
@@ -94,7 +89,6 @@ const PhotoGallery = () => {
                 </div>
                 <div className="polaroid-caption">
                   <h3>{memory.caption}</h3>
-                  <p className="memory-date">{memory.date}</p>
                   <p className="memory-description">{memory.description}</p>
                 </div>
               </div>
@@ -138,7 +132,6 @@ const PhotoGallery = () => {
                 </div>
                 <div className="timeline-info">
                   <h4>{memory.caption}</h4>
-                  <span className="timeline-date">{memory.date}</span>
                   <p>{memory.description}</p>
                 </div>
               </div>
