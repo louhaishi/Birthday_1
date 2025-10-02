@@ -1,0 +1,93 @@
+.balloon-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: floatBalloon 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.balloon:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+  left: 25%;
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.balloon:nth-child(4) {
+  left: 75%;
+  animation-delay: 3s;
+}
+
+.balloon:nth-child(5) {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+.balloon-string {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, #8B4513, transparent);
+  transform: translateX(-50%);
+}
+
+@keyframes floatBalloon {
+  0% {
+    bottom: -80px;
+    transform: translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateX(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    bottom: 100vh;
+    transform: translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Add some size variation */
+.balloon:nth-child(even) {
+  width: 35px;
+  height: 50px;
+}
+
+.balloon:nth-child(3n) {
+  width: 45px;
+  height: 65px;
+}

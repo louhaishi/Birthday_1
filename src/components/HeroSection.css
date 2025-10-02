@@ -1,0 +1,96 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-content {
+  z-index: 3;
+  position: relative;
+  max-width: 800px;
+}
+
+.birthday-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #8B4513;
+  text-shadow: 3px 3px 6px rgba(139, 69, 19, 0.3);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  font-family: 'Georgia', serif;
+}
+
+.birthday-title.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 3px 3px 6px rgba(139, 69, 19, 0.3); }
+  100% { text-shadow: 3px 3px 15px rgba(139, 69, 19, 0.6), 0 0 20px rgba(255, 182, 193, 0.4); }
+}
+
+.birthday-subtitle {
+  font-size: 1.5rem;
+  color: #A0522D;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out 0.5s;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+
+.birthday-subtitle.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.celebrate-btn {
+  background: linear-gradient(45deg, #D2B48C, #DEB887, #F5DEB3);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  color: #8B4513;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+  transform: scale(1);
+  font-family: 'Georgia', serif;
+}
+
+.celebrate-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(45deg, #DEB887, #F5DEB3, #FFEFD5);
+}
+
+.celebrate-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .birthday-title {
+    font-size: 2.5rem;
+  }
+  
+  .birthday-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .celebrate-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

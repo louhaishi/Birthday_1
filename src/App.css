@@ -1,0 +1,11 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #F5F5DC 0%, 
+    #F5E6D3 25%, 
+    #E6D3A3 50%, 
+    #D2B48C 75%, 
+    #DEB887 100%);
+  overflow: hidden;
+}
